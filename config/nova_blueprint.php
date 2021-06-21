@@ -49,4 +49,13 @@ return [
     |
     */
     'resource_namespace' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Nova Resource Title
+    |--------------------------------------------------------------------------
+    | Nova Blueprint allows you to set the $title property of a resource through this configuration.
+    | $title is the single value that should be used to represent the resource when being displayed.
+    */
+    'resource_title' => 'id'
 ];

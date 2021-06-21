@@ -71,6 +71,7 @@ class NovaGenerator implements Generator
             ->thenReturn();
 
         $stub = str_replace('DummyNamespace', $this->getNovaNamespace($model), $stub);
+        $stub = str_replace('DummyModelTitle', config('nova_blueprint.resource_title', 'id'), $stub);
         $stub = str_replace('DummyClass', $model->name(), $stub);
         $stub = str_replace('DummyModel', '\\'.$model->fullyQualifiedClassName(), $stub);
         $stub = str_replace('// fields...', $data['fields'], $stub);
